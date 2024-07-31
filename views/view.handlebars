@@ -1,0 +1,47 @@
+<section class="container-fluid">
+
+    <div class="container" id="stockData" style="margin-bottom: 15rem;">
+        <!-- Main Row -->
+        <div class="row">
+            <!-- Left Column with Heading and Subheadings -->
+            <div class="col-md-5">
+                <h1 class="mt-4 text white" id="stockSymbol">{{stock.meta.symbol}}</h1>
+                <div class="mt-4 text white">
+                    <h3>Currency: {{stock.meta.currency}}</h3>
+                    <h3>Exchange: {{stock.meta.exchange}}</h3>
+                    <h2>Last updated: {{values.datetime}}</h2>
+                    <h2>Open: {{values.open}}</h2>
+                    <h2>Close: {{values.close}}</h2>
+                    <h2>Volume Traded: {{values.volume}}</h2>
+                </div>
+            </div>
+
+            <!-- Right Column with Buttons and iFrame -->
+            <div class="col-md-7">
+
+                <div class="row">
+
+                    <div class="col-md-6"></div>
+
+                    <div class="col-md-6">
+                        <!-- Buttons -->
+                        <div class="button-container mt-10" id="buttons">
+                            <a href="/buy/{{stock.meta.symbol}}&{{values.close}}" id="btnBuy"
+                                class="btn btn-success">Buy</a>
+                            <a href="/add/{{stock.meta.symbol}}" class="btn btn-info" id="btnWatch"
+                                class="btn btn-secondary">
+                                Watchlist
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- iFrame Container -->
+                <div class="iframe-container">
+                    <iframe frameBorder='0' scrolling='no' width='640' height='490' src={{url}}></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

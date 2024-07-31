@@ -1,0 +1,11 @@
+<div class="container text-white" style="margin-top: 17rem; margin-bottom: 20rem;">
+    <h1>Add {{symbol}} to watchlist</h1>
+    <form action="/addWatch/{{symbol}}" method="POST">
+        <div class="form-group">
+            <label for="symbol">Symbol</label>
+            <input type="text" id="symbol" name="symbol" class="form-control" value="{{symbol}}" disabled>
+        </div>
+        <button type="submit" class="btn btn-success">Confirm</button>
+        <a href="/watchlist" class="btn btn-danger">Cancel</a>
+    </form>
+</div>

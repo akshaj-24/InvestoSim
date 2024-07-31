@@ -1,0 +1,20 @@
+<div class="container text-white" style="margin-top: 17rem; margin-bottom: 20rem;">
+    <h1>Sell {{symbol}} stock</h1>
+    <h2>You own {{quantity}} units.</h2>
+    <form action="/sell/{{symbol}}&{{price}}" method="POST">
+        <div class="form-group">
+            <label for="symbol">Symbol</label>
+            <input type="text" id="symbol" name="symbol" class="form-control" value="{{symbol}}" disabled>
+        </div>
+        <div class="form-group">
+            <label for="sellPrice">Price</label>
+            <input type="float" id="sellPrice" name="sellPrice" class="form-control" value="{{price}}" disabled>
+        </div>
+        <div class="form-group">
+            <label for="sell">Quantity</label>
+            <input type="number" id="sell" name="sell" class="form-control" min="1" max="{{quantity}}" required>
+        </div>
+        <button type="submit" class="btn btn-success">Confirm</button>
+        <a href="/portfolio" class="btn btn-danger">Cancel</a>
+    </form>
+</div>

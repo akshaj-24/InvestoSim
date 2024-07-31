@@ -1,0 +1,34 @@
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;
+    background: #000000;
+}
+
+#mainNavbar .nav-link {
+    color: white;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #d62020;
+    font-weight: 450;
+}
+
+#mainNavar #activePage {
+    background-color: #d62020;
+}
+
+#mainNavbar #activePage:hover {
+    color: whitesmoke;
+    font-weight: 450;
+}
+
+#mainNavbar .navbar-brand {
+    color: #d62020;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.navbar.scrolled {
+    background: rgb(0, 0, 0);
+    transition: background 500ms;
+}

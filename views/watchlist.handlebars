@@ -1,0 +1,26 @@
+<div class="container text-white" style="margin-top: 8rem; margin-bottom: 43rem;">
+    <h1 style="font-size: 1.8rem; margin-bottom:2rem;">My Watchlist</h1>
+    {{#if watchlistItems.length}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Current Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each watchlistItems}}
+            <tr>
+                <td><a href="/buy/{{this.symbol}}&{{this.livePrice}}">{{this.symbol}}</a></td>
+                <td>${{this.livePrice}}</td>
+                <th><a href="/remove/{{this.symbol}}" class="btn btn-danger">Remove</a></th>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <p>No stocks in your watchlist.</p>
+    <p>Click on the "Watchlist" button in stock view to get started.</p>
+    {{/if}}
+</div>
